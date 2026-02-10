@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename="/Viks">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
