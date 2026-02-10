@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Navbar from './components/Navbar'
@@ -13,14 +13,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename="/Viks">
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   )
 }
