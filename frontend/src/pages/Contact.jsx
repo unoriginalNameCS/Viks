@@ -15,7 +15,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 import { useState } from 'react'
 
 export default function Contact() {
-  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,10 +33,6 @@ export default function Contact() {
     e.preventDefault()
     // Form submission logic will go here
     console.log('Form submitted:', formData)
-  }
-
-  const goHome = () => {
-    navigate('/')
   }
 
   return (
