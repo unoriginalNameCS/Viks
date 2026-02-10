@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Link } from '@mui/material'
+import { Box, Container, Grid, Typography, Button } from '@mui/material'
 import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone'
@@ -7,6 +7,10 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Footer() {
   const navigate = useNavigate()
+
+  const handleNavigate = path => {
+    navigate(path)
+  }
 
   return (
     <Box
@@ -35,26 +39,18 @@ export default function Footer() {
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
-            <Link
-              component="button"
-              onClick={() => navigate('/')}
-              color="grey.400"
-              underline="hover"
-              display="block"
-              sx={{ cursor: 'pointer', textAlign: 'left' }}
+            <Button
+              onClick={() => handleNavigate('/')}
+              sx={{ color: 'grey.400', display: 'block', textAlign: 'left' }}
             >
               Home
-            </Link>
-            <Link
-              component="button"
-              onClick={() => navigate('/contact')}
-              color="grey.400"
-              underline="hover"
-              display="block"
-              sx={{ cursor: 'pointer', textAlign: 'left' }}
+            </Button>
+            <Button
+              onClick={() => handleNavigate('/contact')}
+              sx={{ color: 'grey.400', display: 'block', textAlign: 'left' }}
             >
               Contact
-            </Link>
+            </Button>
           </Grid>
 
           <Grid item xs={12} md={4}>
