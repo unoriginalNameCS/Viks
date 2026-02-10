@@ -36,18 +36,20 @@ export default function Footer() {
               Quick Links
             </Typography>
             <Link
-              onClick={navigate('/')}
+              onClick={() => navigate('/')}
               color="grey.400"
               underline="hover"
               display="block"
+              sx={{ cursor: 'pointer' }}
             >
               Home
             </Link>
             <Link
-              onClick={navigate('/contact')}
+              onClick={() => navigate('/contact')}
               color="grey.400"
               underline="hover"
               display="block"
+              sx={{ cursor: 'pointer' }}
             >
               Contact
             </Link>
