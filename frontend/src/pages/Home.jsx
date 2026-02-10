@@ -1,5 +1,16 @@
+import { useNavigate } from 'react-router-dom'
+
 export default function Home() {
-    return (
-        <p>Home page lad</p>
-    )
+  const navigate = useNavigate()
+
+  const goToContact = () => {
+    navigate('/contact')
+  }
+
+  return (
+    <>
+      <p>Home page lad</p>
+      <button onClick={goToContact}>Contact page</button>
+    </>
+  )
 }
