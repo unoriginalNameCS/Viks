@@ -3,8 +3,11 @@ import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
+import { useNavigate } from 'react-router-dom'
 
 export default function Footer() {
+  const navigate = useNavigate()
+
   return (
     <Box
       component="footer"
@@ -32,11 +35,16 @@ export default function Footer() {
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
-            <Link href="/" color="grey.400" underline="hover" display="block">
+            <Link
+              onClick={navigate('/')}
+              color="grey.400"
+              underline="hover"
+              display="block"
+            >
               Home
             </Link>
             <Link
-              href="/contact"
+              onClick={navigate('/contact')}
               color="grey.400"
               underline="hover"
               display="block"
